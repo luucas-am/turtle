@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -24,8 +23,6 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         Move();
-        if (Input.GetKeyDown(KeyCode.R))
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     private void OnMove(InputValue value)
