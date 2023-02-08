@@ -5,9 +5,10 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] float moveSpeed;
+    [SerializeField] float speed;
 
     Vector2 moveInput;
+
     Collider2D playerCollider;
     Rigidbody2D playerRigidbody;
 
@@ -33,9 +34,9 @@ public class PlayerMovement : MonoBehaviour
     {
         bool isTouchingWall = playerCollider.IsTouchingLayers(LayerMask.GetMask("Wall"));
 
-        if (isTouchingWall)
+        if (isTouchingWall && playerRigidbody.velocity.magnitude <= Mathf.Epsilon)
         {
-            Vector2 playerVelocity = new Vector2(moveInput.x * moveSpeed, moveInput.y * moveSpeed);
+            Vector2 playerVelocity = new Vector2(moveInput.x * speed * Time.deltaTime, moveInput.y * speed * Time.deltaTime);
             playerRigidbody.velocity = playerVelocity;
         }
     }

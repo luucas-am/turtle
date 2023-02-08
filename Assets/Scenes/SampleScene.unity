@@ -1247,6 +1247,10 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6188272674677901507, guid: d1d262f8c244dcc489ebe8a6089fa82c, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6188272674677901508, guid: d1d262f8c244dcc489ebe8a6089fa82c, type: 3}
       propertyPath: m_RootOrder
       value: 2
